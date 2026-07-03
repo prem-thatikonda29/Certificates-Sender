@@ -1,0 +1,9 @@
+output/
+.env
+sent_log.csv
+progress.json
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+*.zip
