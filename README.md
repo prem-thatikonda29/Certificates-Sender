@@ -1,4 +1,4 @@
-# cert-sender
+# Certificates Sending Application
 
 Generate and email personalized PDF certificates for hackathon participants via Gmail SMTP.
 
