@@ -29,7 +29,7 @@ export default function CodeBlock({ code, label }: CodeBlockProps) {
         <button
           onClick={handleCopy}
           className="absolute top-2 right-2 p-1 text-text-faint bg-canvas border border-border 
-                     opacity-0 group-hover:opacity-100 transition-opacity duration-150 
+                     opacity-0 group-hover:opacity-100 transition-opacity duration-150 cursor-pointer
                      hover:text-text-muted hover:border-border-hover"
           aria-label="Copy code"
         >
