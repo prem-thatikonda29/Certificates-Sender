@@ -37,7 +37,7 @@ export default function HowItWorks() {
         </p>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {steps.map((step, index) => (
-            <div key={step.number} className="relative">
+            <div key={step.number} className="relative py-4 -mx-4 px-4 rounded transition-colors duration-150 hover:bg-surface">
               <span className="text-[11px] font-mono uppercase tracking-[0.15em] text-text-faint">
                 {step.number}
               </span>
@@ -54,7 +54,7 @@ export default function HowItWorks() {
           ))}
         </div>
         <div className="mt-12">
-          <div className="bg-surface border border-border overflow-hidden">
+          <div className="bg-surface border border-border overflow-hidden transition-colors duration-150 hover:border-border-hover">
             <div className="flex items-center gap-2 px-4 py-2 border-b border-border">
               <span className="text-[11px] text-text-faint font-mono">terminal</span>
             </div>

@@ -19,7 +19,7 @@ export default function Quickstart() {
           <div>
             <h3 className="text-sm font-semibold text-text mb-3">Installation</h3>
             <CodeBlock
-              code={`git clone https://github.com/your-username/cert-sender.git\ncd cert-sender\npip install -r requirements.txt`}
+              code={`git clone https://github.com/prem-thatikonda29/Certificates-Sender.git\ncd cert-sender\npip install -r requirements.txt`}
               label="terminal"
             />
           </div>

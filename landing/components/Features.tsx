@@ -71,7 +71,7 @@ export default function Features() {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="bg-surface p-6 md:p-8"
+              className="bg-surface p-6 md:p-8 transition-colors duration-150 hover:bg-surface-raised"
             >
               <div className={`inline-flex p-2 ${feature.color}`}>
                 <feature.icon className={`w-4 h-4 ${feature.textColor}`} weight="fill" />

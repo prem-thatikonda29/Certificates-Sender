@@ -53,7 +53,7 @@ export default function Sidebar() {
               className={`block py-1 px-2 text-[13px] transition-colors duration-150 ${
                 activeSection === id
                   ? "text-text font-medium"
-                  : "text-text-faint hover:text-text-muted"
+                  : "text-text-faint hover:text-text-muted hover:translate-x-0.5"
               }`}
               aria-current={activeSection === id ? "true" : undefined}
             >

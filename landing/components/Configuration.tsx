@@ -58,7 +58,7 @@ export default function Configuration() {
               {tiers.map((tier) => (
                 <tr
                   key={tier.tier}
-                  className="border-b border-border last:border-b-0"
+                  className="border-b border-border last:border-b-0 transition-colors duration-150 hover:bg-surface-raised"
                 >
                   <td className="py-2 px-4 text-[13px] font-mono text-accent-terra-text">
                     {tier.tier}
@@ -81,7 +81,7 @@ export default function Configuration() {
           <h3 className="text-sm font-semibold text-text mb-3">
             Example Tier Config
           </h3>
-          <div className="bg-surface border border-border overflow-hidden">
+          <div className="bg-surface border border-border overflow-hidden transition-colors duration-150 hover:border-border-hover">
             <div className="flex items-center gap-2 px-4 py-2 border-b border-border">
               <span className="text-[11px] text-text-faint font-mono">
                 config.py

@@ -35,7 +35,7 @@ export default function MobileNav() {
                 <a
                   href={`#${id}`}
                   onClick={() => setIsOpen(false)}
-                  className="block py-1.5 px-2 text-sm text-text-muted hover:text-text"
+                  className="block py-1.5 px-2 text-sm text-text-muted hover:text-text hover:translate-x-0.5 transition-all duration-150"
                 >
                   {label}
                 </a>
