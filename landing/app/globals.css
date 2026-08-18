@@ -3,14 +3,15 @@
 @theme inline {
   --color-bg: #0a0a0a;
   --color-surface: #111111;
+  --color-surface-raised: #161616;
   --color-border: #1e1e1e;
   --color-border-hover: #333333;
   --color-text: #e5e5e5;
   --color-text-muted: #737373;
   --color-accent: #3b82f6;
 
-  --font-sans: var(--font-inter);
-  --font-mono: var(--font-jetbrains);
+  --font-sans: var(--font-geist);
+  --font-mono: var(--font-geist-mono);
 }
 
 html {
@@ -25,4 +26,10 @@ body {
 ::selection {
   background-color: var(--color-accent);
   color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

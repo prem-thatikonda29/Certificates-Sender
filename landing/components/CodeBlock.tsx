@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Copy, Check } from "lucide-react";
+import { Copy, Check } from "@phosphor-icons/react";
 
 interface CodeBlockProps {
   language?: string;
@@ -37,7 +37,7 @@ export default function CodeBlock({ code, label }: CodeBlockProps) {
                      hover:text-text hover:border-border-hover"
           aria-label="Copy code"
         >
-          {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+          {copied ? <Check className="w-4 h-4" weight="bold" /> : <Copy className="w-4 h-4" weight="regular" />}
         </button>
         <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent" />
         <pre className="p-4 pl-5 overflow-x-auto">

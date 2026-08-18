@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { List, X } from "@phosphor-icons/react";
 
 const sections = [
   { id: "hero", label: "Home" },
@@ -24,7 +24,7 @@ export default function MobileNav() {
           aria-label="Toggle navigation"
           aria-expanded={isOpen}
         >
-          {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {isOpen ? <X className="w-5 h-5" weight="bold" /> : <List className="w-5 h-5" weight="regular" />}
         </button>
       </div>
       {isOpen && (
