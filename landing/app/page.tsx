@@ -1,0 +1,23 @@
+import Hero from "@/components/Hero";
+import Features from "@/components/Features";
+import HowItWorks from "@/components/HowItWorks";
+import Quickstart from "@/components/Quickstart";
+import Configuration from "@/components/Configuration";
+import Footer from "@/components/Footer";
+
+export default function Home() {
+  return (
+    <main className="pl-0 md:pl-[240px] pt-14 md:pt-0">
+      <Hero />
+      <div className="max-w-[720px] mx-auto px-6">
+        <Features />
+        <HowItWorks />
+        <Quickstart />
+        <Configuration />
+      </div>
+      <div className="max-w-[720px] mx-auto px-6">
+        <Footer />
+      </div>
+    </main>
+  );
+}
