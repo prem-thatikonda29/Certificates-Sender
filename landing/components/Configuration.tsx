@@ -1,5 +1,7 @@
 "use client";
 
+import { useReveal } from "./useReveal";
+
 const tiers = [
   {
     tier: "winner",
@@ -22,70 +24,71 @@ const tiers = [
 ];
 
 export default function Configuration() {
+  const ref = useReveal();
+
   return (
-    <section id="configuration" className="py-[120px]">
-      <h2 className="text-3xl font-bold text-text mb-4">Configuration</h2>
-      <p className="text-text-muted mb-12 max-w-xl">
-        Customize tiers, templates, and email settings in{" "}
-        <code className="font-mono text-accent">config.py</code>.
-      </p>
-      <div className="overflow-x-auto">
-        <table className="w-full text-left">
-          <thead>
-            <tr className="border-b border-border">
-              <th className="py-3 px-4 text-sm font-semibold text-text">
-                Tier
-              </th>
-              <th className="py-3 px-4 text-sm font-semibold text-text">
-                CSV File
-              </th>
-              <th className="py-3 px-4 text-sm font-semibold text-text">
-                Template
-              </th>
-              <th className="py-3 px-4 text-sm font-semibold text-text">
-                Description
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {tiers.map((tier, index) => (
-              <tr
-                key={tier.tier}
-                className={`border-b border-border ${
-                  index % 2 === 0 ? "bg-surface/50" : ""
-                }`}
-              >
-                <td className="py-3 px-4 text-sm font-mono text-accent">
-                  {tier.tier}
-                </td>
-                <td className="py-3 px-4 text-sm font-mono text-text-muted">
-                  {tier.csv}
-                </td>
-                <td className="py-3 px-4 text-sm font-mono text-text-muted">
-                  {tier.template}
-                </td>
-                <td className="py-3 px-4 text-sm text-text-muted">
-                  {tier.description}
-                </td>
+    <section id="configuration" className="py-24 md:py-32">
+      <div ref={ref} className="reveal">
+        <h2 className="font-serif text-3xl md:text-4xl font-normal text-text tracking-[-0.02em]">
+          Configuration
+        </h2>
+        <p className="mt-3 text-text-muted max-w-[50ch] leading-relaxed">
+          Customize tiers, templates, and email settings in{" "}
+          <code className="font-mono text-accent-blue-text bg-accent-blue px-1.5 py-0.5 text-[12px]">config.py</code>.
+        </p>
+        <div className="mt-10 overflow-x-auto border border-border">
+          <table className="w-full text-left">
+            <thead>
+              <tr className="border-b border-border">
+                <th className="py-2 px-4 text-[11px] font-mono uppercase tracking-[0.1em] text-text-faint">
+                  Tier
+                </th>
+                <th className="py-2 px-4 text-[11px] font-mono uppercase tracking-[0.1em] text-text-faint">
+                  CSV File
+                </th>
+                <th className="py-2 px-4 text-[11px] font-mono uppercase tracking-[0.1em] text-text-faint">
+                  Template
+                </th>
+                <th className="py-2 px-4 text-[11px] font-mono uppercase tracking-[0.1em] text-text-faint">
+                  Description
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <div className="mt-10">
-        <h3 className="text-lg font-semibold text-text mb-3">
-          Example Tier Config
-        </h3>
-        <div className="bg-surface border border-border rounded-xl overflow-hidden">
-          <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
-            <span className="text-xs text-text-muted font-mono">
-              config.py
-            </span>
-          </div>
-          <div className="relative">
-            <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent" />
-            <pre className="p-4 pl-5 overflow-x-auto">
-              <code className="text-sm font-mono text-text leading-relaxed">
+            </thead>
+            <tbody>
+              {tiers.map((tier) => (
+                <tr
+                  key={tier.tier}
+                  className="border-b border-border last:border-b-0"
+                >
+                  <td className="py-2 px-4 text-[13px] font-mono text-accent-blue-text">
+                    {tier.tier}
+                  </td>
+                  <td className="py-2 px-4 text-[13px] font-mono text-text-muted">
+                    {tier.csv}
+                  </td>
+                  <td className="py-2 px-4 text-[13px] font-mono text-text-muted">
+                    {tier.template}
+                  </td>
+                  <td className="py-2 px-4 text-[13px] text-text-muted">
+                    {tier.description}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="mt-10">
+          <h3 className="text-sm font-semibold text-text mb-3">
+            Example Tier Config
+          </h3>
+          <div className="bg-surface border border-border overflow-hidden">
+            <div className="flex items-center gap-2 px-4 py-2 border-b border-border">
+              <span className="text-[11px] text-text-faint font-mono">
+                config.py
+              </span>
+            </div>
+            <pre className="p-4 overflow-x-auto">
+              <code className="text-[13px] font-mono text-text leading-relaxed">
                 {`TIERS = {\n    "winner": {\n        "csv": "data/winner.csv",\n        "template": "templates/winner_template.jpg",\n        "output": "output/winner/",\n        "subject": "Congratulations! You Won!",\n        "body": "Dear {name},\\n\\n..."\n    },\n    # ... more tiers\n}`}
               </code>
             </pre>

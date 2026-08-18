@@ -42,25 +42,18 @@ export default function Sidebar() {
 
   return (
     <nav
-      className="fixed left-0 top-0 h-screen w-[240px] bg-bg border-r border-border 
-                 flex-col justify-center px-6 z-40 max-md:hidden"
-      style={{ display: "flex" }}
+      className="fixed left-8 top-1/2 -translate-y-1/2 w-[180px] z-40 max-md:hidden"
       aria-label="Table of contents"
     >
-      <div className="mb-12">
-        <span className="text-lg font-semibold text-text tracking-tight">
-          cert-sender
-        </span>
-      </div>
       <ul className="space-y-1">
         {sections.map(({ id, label }) => (
           <li key={id}>
             <a
               href={`#${id}`}
-              className={`block py-2 px-3 text-sm rounded-md transition-colors duration-200 ${
+              className={`block py-1 px-2 text-[13px] transition-colors duration-150 ${
                 activeSection === id
-                  ? "text-text bg-surface border-l-2 border-accent -ml-[2px]"
-                  : "text-text-muted hover:text-text"
+                  ? "text-text font-medium"
+                  : "text-text-faint hover:text-text-muted"
               }`}
               aria-current={activeSection === id ? "true" : undefined}
             >

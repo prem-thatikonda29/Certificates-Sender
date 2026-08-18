@@ -21,27 +21,22 @@ export default function CodeBlock({ code, label }: CodeBlockProps) {
   return (
     <div className="relative group">
       {label && (
-        <div className="flex items-center gap-2 px-4 py-2 bg-surface border border-b-0 border-border rounded-t-xl">
-          <span className="text-xs text-text-muted font-mono">{label}</span>
+        <div className="flex items-center gap-2 px-4 py-1.5 bg-surface border border-b-0 border-border">
+          <span className="text-[11px] text-text-faint font-mono">{label}</span>
         </div>
       )}
-      <div
-        className={`relative bg-surface border border-border ${
-          label ? "rounded-b-xl" : "rounded-xl"
-        } overflow-hidden`}
-      >
+      <div className="relative bg-surface border border-border overflow-hidden">
         <button
           onClick={handleCopy}
-          className="absolute top-3 right-3 p-1.5 text-text-muted bg-bg border border-border 
-                     rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 
-                     hover:text-text hover:border-border-hover"
+          className="absolute top-2 right-2 p-1 text-text-faint bg-canvas border border-border 
+                     opacity-0 group-hover:opacity-100 transition-opacity duration-150 
+                     hover:text-text-muted hover:border-border-hover"
           aria-label="Copy code"
         >
-          {copied ? <Check className="w-4 h-4" weight="bold" /> : <Copy className="w-4 h-4" weight="regular" />}
+          {copied ? <Check className="w-3.5 h-3.5" weight="bold" /> : <Copy className="w-3.5 h-3.5" weight="regular" />}
         </button>
-        <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent" />
-        <pre className="p-4 pl-5 overflow-x-auto">
-          <code className="text-sm font-mono text-text leading-relaxed">
+        <pre className="p-4 overflow-x-auto">
+          <code className="text-[13px] font-mono text-text leading-relaxed">
             {code}
           </code>
         </pre>
