@@ -34,7 +34,7 @@ export default function Configuration() {
         </h2>
         <p className="mt-3 text-text-muted max-w-[50ch] leading-relaxed">
           Customize tiers, templates, and email settings in{" "}
-          <code className="font-mono text-accent-blue-text bg-accent-blue px-1.5 py-0.5 text-[12px]">config.py</code>.
+          <code className="font-mono text-accent-terra-text bg-accent-terra px-1.5 py-0.5 text-[12px]">config.py</code>.
         </p>
         <div className="mt-10 overflow-x-auto border border-border">
           <table className="w-full text-left">
@@ -60,7 +60,7 @@ export default function Configuration() {
                   key={tier.tier}
                   className="border-b border-border last:border-b-0"
                 >
-                  <td className="py-2 px-4 text-[13px] font-mono text-accent-blue-text">
+                  <td className="py-2 px-4 text-[13px] font-mono text-accent-terra-text">
                     {tier.tier}
                   </td>
                   <td className="py-2 px-4 text-[13px] font-mono text-text-muted">

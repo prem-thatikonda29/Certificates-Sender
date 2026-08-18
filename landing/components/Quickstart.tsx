@@ -29,7 +29,7 @@ export default function Quickstart() {
             </h3>
             <p className="text-[13px] text-text-muted mb-3">
               Create a{" "}
-              <code className="font-mono text-accent-blue-text bg-accent-blue px-1.5 py-0.5 text-[12px]">.env</code> file with your
+              <code className="font-mono text-accent-terra-text bg-accent-terra px-1.5 py-0.5 text-[12px]">.env</code> file with your
               Gmail credentials:
             </p>
             <CodeBlock

@@ -70,7 +70,7 @@ export default function HowItWorks() {
                   {"\n"}...
                 </span>
                 {"\n"}
-                <span className="text-accent-green-text">
+                <span className="text-accent-sage-text">
                   {"\n"}Done! Sent 573 certificates in 4m 32s
                 </span>
               </code>

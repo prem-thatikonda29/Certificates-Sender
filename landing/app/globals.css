@@ -1,23 +1,23 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-canvas: #F7F6F3;
-  --color-surface: #FFFFFF;
-  --color-surface-raised: #F9F9F8;
-  --color-border: #EAEAEA;
-  --color-border-hover: #D4D4D4;
-  --color-text: #111111;
-  --color-text-muted: #787774;
-  --color-text-faint: #AEA9A4;
+  --color-canvas: #F5F0EB;
+  --color-surface: #FDFBF9;
+  --color-surface-raised: #FAF7F4;
+  --color-border: #E5DED5;
+  --color-border-hover: #C9BFB3;
+  --color-text: #2C2520;
+  --color-text-muted: #8A7E74;
+  --color-text-faint: #B5AAA0;
 
-  --color-accent-blue: #E1F3FE;
-  --color-accent-blue-text: #1F6C9F;
-  --color-accent-green: #EDF3EC;
-  --color-accent-green-text: #346538;
-  --color-accent-yellow: #FBF3DB;
-  --color-accent-yellow-text: #956400;
-  --color-accent-red: #FDEBEC;
-  --color-accent-red-text: #9F2F2D;
+  --color-accent-terra: #E8D5CC;
+  --color-accent-terra-text: #9C5A42;
+  --color-accent-sage: #D9E2D4;
+  --color-accent-sage-text: #4A6340;
+  --color-accent-amber: #F0E4CC;
+  --color-accent-amber-text: #8A6B2A;
+  --color-accent-rose: #EADADD;
+  --color-accent-rose-text: #8A4A5C;
 
   --font-sans: var(--font-geist);
   --font-mono: var(--font-geist-mono);
@@ -34,8 +34,8 @@ body {
 }
 
 ::selection {
-  background-color: var(--color-accent-blue);
-  color: var(--color-accent-blue-text);
+  background-color: var(--color-accent-terra);
+  color: var(--color-accent-terra-text);
 }
 
 .reveal {
