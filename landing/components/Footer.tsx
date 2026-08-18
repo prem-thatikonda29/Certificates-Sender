@@ -26,7 +26,7 @@ export default function Footer() {
               Get Started <ArrowRight className="w-4 h-4" weight="bold" />
             </a>
             <a
-              href="https://github.com/your-username/cert-sender"
+              href="https://github.com/prem-thatikonda29/Certificates-Sender"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-text font-medium text-sm
@@ -43,7 +43,7 @@ export default function Footer() {
           <span className="font-medium text-text-muted">cert-sender</span>
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/your-username/cert-sender"
+              href="https://github.com/prem-thatikonda29/Certificates-Sender"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-text-muted transition-colors duration-150"
